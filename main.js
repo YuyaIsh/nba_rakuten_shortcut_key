@@ -6,16 +6,19 @@ window.onload = function() {
         // space
         if (e.keyCode==32){
                 const buttons = document.querySelectorAll(".playButton");
+
+                // NodeListを配列に変換
                 const buttonsArray = [].map.call(buttons, (ele) => ele);
+
+                // 表示されている要素のみ抽出
                 const button = buttonsArray.filter(
                     (ele) => ele.style.display !== "none"
                 );
+
                 button[0].querySelectorAll(".playButton-background")[0].click();
 
-                document.querySelectorAll(".playStart-background")[0].click();
-
                 return false;
-            }
+        }
 
         // >(,)で30秒進む
         if (e.keyCode==188){
