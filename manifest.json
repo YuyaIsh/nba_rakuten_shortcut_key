@@ -1,0 +1,12 @@
+{
+  "name": "Add shortcut key to NBA Rakuten",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "楽天NBAにショートカットキーを追加する",
+  "content_scripts": [
+    {
+      "matches": ["https://nba.rakuten.co.jp/games/*"],
+      "js": ["main.js"]
+    }
+  ]
+}
